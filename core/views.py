@@ -21,7 +21,7 @@ def home(request):
                 if user.verified:
                     to_be_Sent == 0 #user already exists and is verified, so no need to send email.
                     return render(request, 'success.html',{"message":"already registered"})
-        #lese the mail has to be sent for verification.
+        #else the mail has to be sent for verification.
         if to_be_Sent == 1 and user == None:
             global new
             z = 'abcdefghij1234567890klmnopqrstuvwxyz'
