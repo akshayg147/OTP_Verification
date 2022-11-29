@@ -57,7 +57,7 @@ def verfication(request):
         ot = request.POST['otp']
         #If the user exists but not verified.
         if Verify.objects.filter(email=user_email).exists():
-            if Verify.objects.get(email=user_email).verified:
+            if not Verify.objects.get(email=user_email).verified:
                 return render(request,'Email.html')
         if ot == otp:
             #if OTP entered by user is correct then user is verified and would be stored into database.
