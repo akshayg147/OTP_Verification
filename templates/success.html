@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>verified</title>
+</head>
+<body>
+<div class="jumbotron text-center">
+    {% if not message %}
+  <h1 class="display-3">Thank You!</h1>
+  <p class="lead">We at Socialgram are delighted to have you with us. :)</p>
+  <hr>
+    {% endif %}
+
+
+
+    </div>
+<div>
+                    <style>
+                        h5{
+                            color: red;
+                        }
+                    </style>
+                    {% if message %}
+                    <h5>{{message}}</h5>
+                    {% endif %}
+                </div>
+  <p>
+    Having trouble? <a>Contact us</a>
+  </p>
+  <p class="lead">
+    <a class="btn btn-primary btn-sm" role="button">Continue to homepage</a>
+  </p>
+</div>
+
+</body>
+</html>
